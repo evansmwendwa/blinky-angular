@@ -1,9 +1,12 @@
 /* tslint:disable:no-unused-variable */
+import {} from 'jasmine';
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Location, CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
+
 
 describe('AppComponent', () => {
     let component: AppComponent;
@@ -19,7 +22,8 @@ describe('AppComponent', () => {
             ],
             declarations: [
                 AppComponent,
-                HomeComponent
+                HomeComponent,
+                HeaderComponent
             ],
         });
     });
