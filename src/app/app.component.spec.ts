@@ -1,34 +1,39 @@
 /* tslint:disable:no-unused-variable */
-
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, async, ComponentFixture } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { Location, CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 
 describe('AppComponent', () => {
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
+    let component: AppComponent;
+    let fixture: ComponentFixture<AppComponent>;
+
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            imports: [
+                CommonModule,
+                RouterTestingModule.withRoutes([
+                    {path: '', component: HomeComponent}
+                ])
+            ],
+            declarations: [
+                AppComponent,
+                HomeComponent
+            ],
+        });
     });
-  });
 
-  it('should create the app', async(() => {
-    let fixture = TestBed.createComponent(AppComponent);
-    let app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
-  }));
+    it('should create the app', async(() => {
+        fixture = TestBed.createComponent(AppComponent);
+        let app = fixture.debugElement.componentInstance;
+        expect(app).toBeTruthy();
+    }));
 
-  it(`should have as title 'Blinky Bill Music'`, async(() => {
-    let fixture = TestBed.createComponent(AppComponent);
-    let app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('Blinky Bill Music');
-  }));
+    it('should create the component', async(() => {
+        fixture = TestBed.createComponent(AppComponent);
+        component = fixture.componentInstance;
+        expect(component).toBeTruthy();
+    }));
 
-  it('should render title in a h1 tag', async(() => {
-    let fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    let compiled = fixture.debugElement.nativeElement;
-    let app = fixture.debugElement.componentInstance;
-    expect(compiled.querySelector('h1').textContent).toContain(app.title);
-  }));
 });
