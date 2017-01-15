@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app.routing';
 // import components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
 
 // import services
 
@@ -25,7 +26,8 @@ import { HomeComponent } from './home/home.component';
     ],
     declarations: [
         AppComponent,
-        HomeComponent
+        HomeComponent,
+        HeaderComponent
     ],
     providers: [
 
