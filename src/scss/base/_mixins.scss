@@ -1,0 +1,97 @@
+@mixin font-face ($family, $filename, $weight, $style:normal)
+{
+    @font-face {
+        font-family:'#{$family}';
+    	src: url('#{$fonts-path}/#{$family}/#{$filename}.woff') format('woff');
+    	font-weight: $weight;
+    	font-style: $style;
+    }
+}
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+}
+
+@mixin border-box {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin transitions {
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+}
+
+@mixin rotate($degs) {
+    -ms-transform: rotate($degs); /* IE 9 */
+   -webkit-transform: rotate($degs); /* Chrome, Safari, Opera */
+   transform: rotate($degs);
+}
+
+@mixin animate($duration) {
+    transition: all #{$duration} ease;
+}
+
+@mixin scale($ratio) {
+    transform:scale($ratio);
+}
+
+@mixin background($filename, $position: center, $repeat: no-repeat) {
+    background: url('#{$img-path}/#{$filename}') $position $repeat;
+}
+
+@mixin grayscale($amount: 100%) {
+    -webkit-filter: grayscale($amount);
+    filter: grayscale($amount);
+}
+
+@mixin skew($deg) {
+    transform: skew($deg);
+}
+
+@mixin placeholder($color) {
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $color;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: $color;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      color: $color;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: $color;
+    }
+}
+
+@mixin inlinelist {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+
+    li{
+        display: inline-block;
+    }
+}
+
+@mixin flatlist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
