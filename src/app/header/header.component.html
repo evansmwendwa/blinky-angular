@@ -1,4 +1,13 @@
-<header class="container-fluid">
-    <a class="logo"><img src="assets/images/logo.png" alt="Blinky" /></a>
-    <span class="menu-expander"></span>
+<header>
+    <div class="topmenu">
+        <div class="container-fluid top-buttons">
+            <a class="logo"><img src="assets/images/logo.png" alt="Blinky" /></a>
+
+            <button class="hamburger hamburger--emphatic" [ngClass]="{'is-active':menuActive }" type="button" (click)="toggleMenu()">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+    </div>
 </header>

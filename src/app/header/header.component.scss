@@ -1,0 +1,41 @@
+@import "src/scss/index";
+
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: $grid-padding;
+    padding-bottom: 10px;
+}
+.topmenu{
+    position: relative;
+    width: 100%;
+    height: 52px;
+
+    .top-buttons{
+        position: relative;
+        width: 126px;
+        height: 52px;
+
+        .logo{
+            display: block;
+            position: absolute;
+            left:0;
+            top:0;
+            height: 52px;
+
+            img{
+                width: auto;
+                height: 100%;
+            }
+        }
+
+        .hamburger{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding:7px 10px 9px;
+        }
+    }
+}
