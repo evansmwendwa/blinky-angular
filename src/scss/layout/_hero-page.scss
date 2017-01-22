@@ -1,0 +1,99 @@
+.hero-image{
+    background: cyan;
+    width: 100%;
+    height: 400px;
+    background: url('#{$img-path}/blinky.jpg') center center no-repeat;
+    background-size: cover;
+
+    @media(min-width: 768px) {
+        height:550px;
+    }
+
+    @media(min-width: 1024px) {
+        position: fixed;
+        top:0;
+        right: 0;
+        width: 55%;
+        height: 100%;
+    }
+}
+.page-container{
+    .hero-page{
+        position: relative;
+        padding: $grid-padding;
+
+        @media(min-width: 1024px) {
+            position: fixed;
+            top:0;
+            left:0;
+            width: 45%;
+            height: 100%;
+        }
+
+        .highlight-text{
+            max-width: 400px;
+            padding: 25px 0;
+
+            @media(min-width: 768px) {
+                padding: 25px;
+            }
+
+            @media(min-width: 1024px) {
+                margin-top:100px;
+            }
+
+            @media(min-width: 1366px) {
+                margin-top:120px;
+            }
+
+            @media(min-width: 1600px) {
+                margin-top:150px;
+            }
+
+            h1{
+                text-transform: uppercase;
+                font-family: 'wask', sans-serif;
+                font-weight: bold;
+                color:#000;
+                margin: 0;
+                line-height: 0.8em;
+                font-size: 70px;
+
+                @media(min-width: 1024px) {
+                    font-size: 100px;
+                }
+
+                @media(min-width: 1366px) {
+                    font-size: 120px;
+                }
+
+                @media(min-width: 1600px) {
+                    font-size: 150px;
+                }
+
+                @media(min-width: 1800px) {
+                    font-size: 170px;
+                }
+
+                span{
+                    color:#00a48d;
+                }
+            }
+
+            .explore-link{
+                display: block;
+                margin: 25px 0;
+                text-transform: uppercase;
+                font-family: 'wask', sans-serif;
+                color:#000;
+                font-weight: bold;
+                font-size: 30px;
+                text-decoration: none;
+
+                @media(min-width: 1600px) {
+                    margin-left:5px;
+                }
+            }
+        }
+    }
+}
