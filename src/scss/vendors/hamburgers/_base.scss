@@ -80,6 +80,10 @@
                 width: $hamburger-layer-width;
                 left:auto;
                 right: auto;
+                background: #fff;
+            }
+            &::before{
+                background: #fff;
             }
         }
     }
