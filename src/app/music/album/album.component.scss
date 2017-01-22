@@ -1,0 +1,123 @@
+@import "src/scss/index";
+
+.album-page{
+    padding: 100px 25px 0;
+
+    .album-view{
+        max-width: 520px;
+        padding: 20px;
+
+        @media(min-width: 840px) {
+            max-width: 1120px;
+        }
+
+        @media(min-width: 1024px) {
+            padding: 50px 30px 30px;
+        }
+
+        @media(min-width: 1600px) {
+            padding-top:70px;
+            max-width: 1300px;
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+
+        .shares{
+            text-transform: uppercase;
+            color:#000;
+            font-size: 10px;
+            font-weight: normal;
+            padding: 30px 0 10px;
+
+            .share-links{
+                padding-bottom: 30px;
+                a{
+                    color:#000;
+                    margin-right: 20px;
+                }
+
+            }
+        }
+
+        .album-stage{
+            @media(min-width: 840px) {
+                width: 50%;
+                float: left;
+            }
+        }
+    }
+
+    .album-details{
+        text-transform: uppercase;
+
+        @media(min-width: 840px) {
+            width: 50%;
+            float: right;
+            padding: 25px 25px 25px 50px;
+        }
+
+        @media(min-width: 1024px) {
+            padding:35px 50px 50px;
+        }
+
+        @media(min-width: 1366px) {
+            padding-left:70px;
+        }
+
+        @media(min-width: 1600px) {
+            padding-left:100px;
+        }
+
+        h2{
+            font-weight: normal;
+            font-weight: 300;
+            font-size: 30px;
+            margin: 30px 0;
+
+            @media(min-width: 840px) {
+                margin: 0 0 30px;
+            }
+        }
+
+        .tracks-count{
+            font-size: 18px;
+            font-style: italic;
+            margin: 0 0 30px;
+            font-family: wask, sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .release-date{
+            color:#707070;
+            font-weight: normal;
+            font-size: 10px;
+        }
+
+        .shop-links{
+            padding: 30px 0;
+
+            a{
+                display: block;
+                width: 100%;
+                max-width: 190px;
+                float: left;
+                font-size: 11px;
+                color:#111;
+                margin: 0 15px 15px 0;
+                border:1px solid #231f20;
+                padding: 15px;
+                text-align: center;
+                text-decoration: none;
+                @include animate(.25s);
+
+                &:hover{
+                    background: #231f20;
+                    color:#fff;
+                }
+            }
+        }
+    }
+}
