@@ -7,6 +7,10 @@ header{
     width: 100%;
     padding: $grid-padding;
     padding-bottom: 10px;
+
+    @media(min-width: 1024px) {
+        padding: 40px 20px 10px 50px;
+    }
 }
 .topmenu{
     position: relative;
@@ -36,6 +40,10 @@ header{
             right: 0;
             bottom: 0;
             padding:7px 10px 9px;
+
+            &.is-active{
+                color:#fff;
+            }
         }
     }
 }

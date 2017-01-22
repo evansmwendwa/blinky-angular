@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuService } from '../menu/menu.service';
 
 @Component({
     selector: 'site-header',
@@ -7,15 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-    public menuActive = false;
-
-    constructor() { }
+    constructor(public menuService: MenuService) { }
 
     ngOnInit() {
-    }
-
-    toggleMenu() {
-        this.menuActive = !this.menuActive;
     }
 
 }

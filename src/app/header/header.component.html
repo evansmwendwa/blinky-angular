@@ -3,7 +3,7 @@
         <div class="container-fluid top-buttons">
             <a class="logo"><img src="assets/images/logo.png" alt="Blinky" /></a>
 
-            <button class="hamburger hamburger--emphatic" [ngClass]="{'is-active':menuActive }" type="button" (click)="toggleMenu()">
+            <button class="hamburger hamburger--emphatic" [ngClass]="{'is-active': menuService.menuExpanded }" type="button" (click)="menuService.toggleMenu()">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
