@@ -6,7 +6,8 @@ import { Location, CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
-
+import { MenuComponent } from './menu/menu.component';
+import { MenuService } from './menu/menu.service';
 
 describe('AppComponent', () => {
     let component: AppComponent;
@@ -23,8 +24,12 @@ describe('AppComponent', () => {
             declarations: [
                 AppComponent,
                 HomeComponent,
-                HeaderComponent
+                HeaderComponent,
+                MenuComponent
             ],
+            providers: [
+                MenuService
+            ]
         });
     });
 
