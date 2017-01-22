@@ -16,6 +16,8 @@ import { MenuComponent } from './menu/menu.component';
 import { StateService } from './core';
 import { MenuService } from './menu/menu.service';
 import { MusicComponent } from './music/music.component';
+import { AlbumComponent } from './music/album/album.component';
+import { RadioComponent } from './radio/radio.component';
 
 // import pipes
 
@@ -33,7 +35,9 @@ import { MusicComponent } from './music/music.component';
         HomeComponent,
         HeaderComponent,
         MenuComponent,
-        MusicComponent
+        MusicComponent,
+        AlbumComponent,
+        RadioComponent
     ],
     providers: [
         StateService,
