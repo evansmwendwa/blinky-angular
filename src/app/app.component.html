@@ -2,5 +2,6 @@
     <div id="page-content-wrapper">
         <router-outlet></router-outlet>
     </div>
+    <site-menu *ngIf="menuService.menuExpanded"></site-menu>
     <site-header></site-header>
 </div>
