@@ -20,7 +20,7 @@ export class MenuComponent implements OnInit {
         },
         {
             theme:'#f9f200',
-            link:'',
+            link:'/radio',
             text: 'Radio'
         },
         {
