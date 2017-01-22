@@ -10,8 +10,11 @@ import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
+import { MenuComponent } from './menu/menu.component';
 
 // import services
+import { StateService } from './core';
+import { MenuService } from './menu/menu.service';
 
 // import pipes
 
@@ -27,10 +30,12 @@ import { HeaderComponent } from './header/header.component';
     declarations: [
         AppComponent,
         HomeComponent,
-        HeaderComponent
+        HeaderComponent,
+        MenuComponent
     ],
     providers: [
-
+        StateService,
+        MenuService
     ],
     exports: [
         AppRoutingModule
