@@ -15,6 +15,7 @@ import { MenuComponent } from './menu/menu.component';
 // import services
 import { StateService } from './core';
 import { MenuService } from './menu/menu.service';
+import { MusicComponent } from './music/music.component';
 
 // import pipes
 
@@ -31,7 +32,8 @@ import { MenuService } from './menu/menu.service';
         AppComponent,
         HomeComponent,
         HeaderComponent,
-        MenuComponent
+        MenuComponent,
+        MusicComponent
     ],
     providers: [
         StateService,
