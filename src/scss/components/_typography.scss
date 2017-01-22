@@ -5,7 +5,7 @@
 @include font-face("gotham","Gotham-Bold_gdi",700);
 
 // Wask New
-@include font-face("wask","wask_new-webfont", 400);
-@include font-face("wask","wask_new_italic-webfont", 400, 'italic');
-@include font-face("wask","wask_new_bold-webfont", 700);
-@include font-face("wask","wask_new_bold_italic-webfont", 700, 'italic');
+@include font-face("wask","wask_new-webfont", normal, normal);
+@include font-face("wask","wask_new_italic-webfont", normal, italic);
+@include font-face("wask","wask_new_bold-webfont", bold,normal);
+@include font-face("wask","wask_new_bold_italic-webfont", bold, italic);
