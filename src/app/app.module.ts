@@ -25,6 +25,7 @@ import { RadioComponent } from './radio/radio.component';
 import { RadioPlayerComponent } from './radio/radio-player/radio-player.component';
 import { VideosComponent } from './videos/videos.component';
 import { VideoPlayerComponent } from './videos/player/player.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
     imports: [
@@ -43,7 +44,8 @@ import { VideoPlayerComponent } from './videos/player/player.component';
         RadioComponent,
         RadioPlayerComponent,
         VideosComponent,
-        VideoPlayerComponent
+        VideoPlayerComponent,
+        NewsComponent
     ],
     providers: [
         StateService,

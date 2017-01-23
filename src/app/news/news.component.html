@@ -1,0 +1,11 @@
+<div class="container-fluid news-page">
+    <div class="container-fluid news-container">
+        <h1>Blinktank<span>blog</span></h1>
+        <div class="container-fluid news-list">
+            <a routerLink="/news/{{ item.id }}" class="news-item" *ngFor="let item of news">
+                <img [src]="item.image"  />
+                <h3>{{ item.title }}</h3>
+            </a>
+        </div>
+    </div>
+</div>
