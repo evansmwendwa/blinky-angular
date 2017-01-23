@@ -1,8 +1,9 @@
 @import "src/scss/index";
 
 nav{
-    position: absolute;
+    position: fixed;
     top:0;
+    left:0;
     width: 40%;
     height: 100%;
     background: #000;
