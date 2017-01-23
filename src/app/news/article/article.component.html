@@ -1,0 +1,49 @@
+<div class="container-fluid article-page">
+    <div class="container-fluid news-article">
+        <h1>How it all went down at the Blinky Bill &amp; the Keycutters show Live at the Alchemist</h1>
+        <div class="release-date">December 16, 2016</div>
+        <div class="shares">
+            <a href="#" target="_blank"><i class="icon-facebook"></i></a>
+            <a href="#" target="_blank"><i class="icon-twitter"></i></a>
+            <a href="#" target="_blank"><i class="icon-google-plus"></i></a>
+        </div>
+        <div class="article-image">
+            <img src="/assets/images/blog-article.jpg" alt=""  />
+        </div>
+        <div class="article-contents">
+            <p>
+                The band has announced their two final shows for the foreseeable future in Nairobi: April 8 at the Goethe Institut Auditorium and
+April 10 at Blankets and Wine.
+            </p>
+            <p>
+                Just A Band aren’t <a href="#">leaving us empty-handed</a> though, they depart with the new synth-heavy instrumental jam “African Kids These
+Days,” which was recorded for their fourth album.
+            </p>
+            <p>
+                In terms of their own projects, <a href="#">Blinky Bill</a> is readying a debut solo album tentatively titled Everyone’s Just Winging It &amp Other Fly
+Tales, he’s also working on a monthly RBMA Radio show. He’ll also be Daniel, under his Nairobidhobi alias, will be working on a
+graphic novel and experimenting with comic collective Comi(K)ment Issues. And Mbithi is already finishing up his first
+feature-length film KatiKati, he’ll keep releasing music as RickySuede.
+            </p>
+            <p>
+                Stream Just A Band’s final song (for now) “African Kids These Days” and revisit their last video for “Winning In Life” below. Keep
+up with the group’s individual projects here.
+            </p>
+        </div>
+        <div class="shares bottom-shares">
+            <div class="share-label">Share</div>
+            <a href="#" target="_blank"><i class="icon-facebook"></i></a>
+            <a href="#" target="_blank"><i class="icon-twitter"></i></a>
+            <a href="#" target="_blank"><i class="icon-google-plus"></i></a>
+        </div>
+        <div class="related-articles">
+            <h4>Explore more below</h4>
+            <div class="container-fluid news-list">
+                <a routerLink="/news/{{ item.id }}" class="news-item" *ngFor="let item of news">
+                    <img [src]="item.image"  />
+                    <h3>{{ item.title }}</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

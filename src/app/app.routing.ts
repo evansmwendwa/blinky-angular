@@ -8,6 +8,7 @@ import { RadioPlayerComponent } from './radio/radio-player/radio-player.componen
 import { VideosComponent } from './videos/videos.component';
 import { VideoPlayerComponent } from './videos/player/player.component';
 import { NewsComponent } from './news/news.component';
+import { ArticleComponent } from './news/article/article.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
     { path: 'radio/:id', component: RadioPlayerComponent },
     { path: 'videos', component: VideosComponent },
     { path: 'videos/:id', component: VideoPlayerComponent },
-    { path: 'news', component: NewsComponent }
+    { path: 'news', component: NewsComponent },
+    { path: 'news/:id', component: ArticleComponent }
 ];
 
 @NgModule({
