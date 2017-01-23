@@ -6,23 +6,24 @@ import { HttpModule } from '@angular/http';
 // import app modules
 import { AppRoutingModule } from './app.routing';
 
+// import services
+import { StateService } from './core';
+import { MenuService } from './menu/menu.service';
+
+// import pipes
+
+// import directives
+
 // import components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
-
-// import services
-import { StateService } from './core';
-import { MenuService } from './menu/menu.service';
 import { MusicComponent } from './music/music.component';
 import { AlbumComponent } from './music/album/album.component';
 import { RadioComponent } from './radio/radio.component';
 import { RadioPlayerComponent } from './radio/radio-player/radio-player.component';
-
-// import pipes
-
-// import directives
+import { VideosComponent } from './videos/videos.component';
 
 @NgModule({
     imports: [
@@ -39,7 +40,8 @@ import { RadioPlayerComponent } from './radio/radio-player/radio-player.componen
         MusicComponent,
         AlbumComponent,
         RadioComponent,
-        RadioPlayerComponent
+        RadioPlayerComponent,
+        VideosComponent
     ],
     providers: [
         StateService,

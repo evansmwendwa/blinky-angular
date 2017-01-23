@@ -5,13 +5,15 @@ import { MusicComponent } from './music/music.component';
 import { AlbumComponent } from './music/album/album.component';
 import { RadioComponent } from './radio/radio.component';
 import { RadioPlayerComponent } from './radio/radio-player/radio-player.component';
+import { VideosComponent } from './videos/videos.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'music/:id', component: AlbumComponent },
     { path: 'music', component: MusicComponent },
     { path: 'radio', component: RadioComponent },
-    { path: 'radio/:id', component: RadioPlayerComponent }
+    { path: 'radio/:id', component: RadioPlayerComponent },
+    { path: 'videos', component: VideosComponent }
 ];
 
 @NgModule({
