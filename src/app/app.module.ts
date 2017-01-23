@@ -24,6 +24,7 @@ import { AlbumComponent } from './music/album/album.component';
 import { RadioComponent } from './radio/radio.component';
 import { RadioPlayerComponent } from './radio/radio-player/radio-player.component';
 import { VideosComponent } from './videos/videos.component';
+import { VideoPlayerComponent } from './videos/player/player.component';
 
 @NgModule({
     imports: [
@@ -41,7 +42,8 @@ import { VideosComponent } from './videos/videos.component';
         AlbumComponent,
         RadioComponent,
         RadioPlayerComponent,
-        VideosComponent
+        VideosComponent,
+        VideoPlayerComponent
     ],
     providers: [
         StateService,

@@ -6,6 +6,7 @@ import { AlbumComponent } from './music/album/album.component';
 import { RadioComponent } from './radio/radio.component';
 import { RadioPlayerComponent } from './radio/radio-player/radio-player.component';
 import { VideosComponent } from './videos/videos.component';
+import { VideoPlayerComponent } from './videos/player/player.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
     { path: 'music', component: MusicComponent },
     { path: 'radio', component: RadioComponent },
     { path: 'radio/:id', component: RadioPlayerComponent },
-    { path: 'videos', component: VideosComponent }
+    { path: 'videos', component: VideosComponent },
+    { path: 'videos/:id', component: VideoPlayerComponent }
 ];
 
 @NgModule({
