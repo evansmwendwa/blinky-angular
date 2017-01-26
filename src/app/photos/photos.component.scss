@@ -1,0 +1,27 @@
+.pictures-page{
+    padding: 100px 25px 25px;
+
+    h1{
+        text-transform: uppercase;
+        font-family: wask, gotham, sans-serif;
+        font-weight: bold;
+        font-size: 100px;
+        line-height: 0.8em;
+        margin: 35px 100px;
+        color:#000;
+
+        span{
+            color:#e1287a;
+        }
+    }
+}
+.brick {
+    width: 20%;
+    padding: 2px;
+
+    img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}

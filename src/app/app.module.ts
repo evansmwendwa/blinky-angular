@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 // import app modules
 import { AppRoutingModule } from './app.routing';
+import { MasonryModule } from 'angular2-masonry';
 
 // import services
 import { StateService } from './core';
@@ -27,12 +28,14 @@ import { VideosComponent } from './videos/videos.component';
 import { VideoPlayerComponent } from './videos/player/player.component';
 import { NewsComponent } from './news/news.component';
 import { ArticleComponent } from './news/article/article.component';
+import { PhotosComponent } from './photos/photos.component';
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
+        MasonryModule,
         AppRoutingModule
     ],
     declarations: [
@@ -47,7 +50,8 @@ import { ArticleComponent } from './news/article/article.component';
         VideosComponent,
         VideoPlayerComponent,
         NewsComponent,
-        ArticleComponent
+        ArticleComponent,
+        PhotosComponent
     ],
     providers: [
         StateService,

@@ -9,6 +9,7 @@ import { VideosComponent } from './videos/videos.component';
 import { VideoPlayerComponent } from './videos/player/player.component';
 import { NewsComponent } from './news/news.component';
 import { ArticleComponent } from './news/article/article.component';
+import { PhotosComponent } from './photos/photos.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -19,7 +20,8 @@ const routes: Routes = [
     { path: 'videos', component: VideosComponent },
     { path: 'videos/:id', component: VideoPlayerComponent },
     { path: 'news', component: NewsComponent },
-    { path: 'news/:id', component: ArticleComponent }
+    { path: 'news/:id', component: ArticleComponent },
+    { path: 'photos', component: PhotosComponent }
 ];
 
 @NgModule({

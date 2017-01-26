@@ -45,7 +45,7 @@ export class MenuComponent implements OnInit {
         },
         {
             theme:'#e1287a',
-            link:'',
+            link:'/photos',
             text: 'Photos'
         },
         {
