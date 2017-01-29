@@ -1,8 +1,6 @@
 # Blink
 
-[![CI Status]
-   (http://img.shields.io/travis/roamlrs/roamlrs.svg?style=flat)]
-   (https://travis-ci.org/roamlrs/roamlrs)
+[![Build Status](https://travis-ci.org/evansmwendwa/blinky-angular.svg?branch=master)](https://travis-ci.org/evansmwendwa/blinky-angular)
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.20-4.
 
