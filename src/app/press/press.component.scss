@@ -1,0 +1,57 @@
+@import "src/scss/index";
+
+.highlight-text.press-heading {
+    h1{
+        span{
+            color:#c885b1;
+        }
+    }
+}
+
+
+.press-link{
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 25px;
+    padding: 20px 0 0 0;
+
+    .link-text {
+        text-transform: uppercase;
+        color:#231528;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.1em;
+        @include animate(.25s);
+    }
+
+
+
+    .link-site{
+        font-weight: 600;
+        color:#959595;
+        font-size: 14px;
+        margin: 20px 0;
+    }
+
+    .hover-line{
+        width:0;
+        max-width: 500px;
+        height: 13px;
+        background: #c885b1;
+        @include animate(.5s);
+    }
+
+    &:hover {
+        text-decoration: none;
+        .link-text{
+            color:#c885b1;
+            font-weight: 600;
+        }
+
+        .hover-line{
+            width: 100%;
+        }
+    }
+
+}

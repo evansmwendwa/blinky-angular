@@ -40,7 +40,7 @@ export class MenuComponent implements OnInit {
         },
         {
             theme:'#c885b1',
-            link:'',
+            link:'/press',
             text: 'Press'
         },
         {

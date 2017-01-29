@@ -30,6 +30,7 @@ import { NewsComponent } from './news/news.component';
 import { ArticleComponent } from './news/article/article.component';
 import { PhotosComponent } from './photos/photos.component';
 import { HelloComponent } from './hello/hello.component';
+import { PressComponent } from './press/press.component';
 
 @NgModule({
     imports: [
@@ -53,7 +54,8 @@ import { HelloComponent } from './hello/hello.component';
         NewsComponent,
         ArticleComponent,
         PhotosComponent,
-        HelloComponent
+        HelloComponent,
+        PressComponent
     ],
     providers: [
         StateService,
