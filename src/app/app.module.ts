@@ -29,6 +29,7 @@ import { VideoPlayerComponent } from './videos/player/player.component';
 import { NewsComponent } from './news/news.component';
 import { ArticleComponent } from './news/article/article.component';
 import { PhotosComponent } from './photos/photos.component';
+import { HelloComponent } from './hello/hello.component';
 
 @NgModule({
     imports: [
@@ -51,7 +52,8 @@ import { PhotosComponent } from './photos/photos.component';
         VideoPlayerComponent,
         NewsComponent,
         ArticleComponent,
-        PhotosComponent
+        PhotosComponent,
+        HelloComponent
     ],
     providers: [
         StateService,

@@ -10,6 +10,7 @@ import { VideoPlayerComponent } from './videos/player/player.component';
 import { NewsComponent } from './news/news.component';
 import { ArticleComponent } from './news/article/article.component';
 import { PhotosComponent } from './photos/photos.component';
+import { HelloComponent } from './hello/hello.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -21,7 +22,8 @@ const routes: Routes = [
     { path: 'videos/:id', component: VideoPlayerComponent },
     { path: 'news', component: NewsComponent },
     { path: 'news/:id', component: ArticleComponent },
-    { path: 'photos', component: PhotosComponent }
+    { path: 'photos', component: PhotosComponent },
+    { path: 'hello', component: HelloComponent }
 ];
 
 @NgModule({

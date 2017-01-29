@@ -50,7 +50,7 @@ export class MenuComponent implements OnInit {
         },
         {
             theme:'#3f147b',
-            link:'',
+            link:'/hello',
             text: 'Hello!'
         }
     ];
