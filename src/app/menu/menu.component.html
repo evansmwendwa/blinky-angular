@@ -1,5 +1,8 @@
 <nav>
     <ul>
-        <li *ngFor="let link of links"><a [routerLink]="link.link"><i [ngStyle]="{'background':link.theme}"></i> <span>{{ link.text }}</span></a></li>
+        <li *ngFor="let link of links">
+            <a [routerLink]="link.link" [routerLinkActiveOptions]="{exact:true}"
+            [routerLinkActive]="'active ' + link.key"
+            ><i class="{{link.key}}"></i><span>{{ link.text }}</span></a></li>
     </ul>
 </nav>

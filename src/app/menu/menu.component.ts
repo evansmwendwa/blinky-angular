@@ -9,49 +9,49 @@ export class MenuComponent implements OnInit {
 
     public links = [
         {
-            theme:'#a11d77',
             link:'/music',
-            text: 'Music'
+            text: 'Music',
+            key: 'music'
         },
         {
-            theme:'#313b72',
             link:'/videos',
-            text: 'Videos'
+            text: 'Videos',
+            key: 'videos'
         },
         {
-            theme:'#f9f200',
             link:'/radio',
-            text: 'Radio'
+            text: 'Radio',
+            key: 'radio'
         },
         {
-            theme:'#9ed2ce',
             link:'news',
-            text: 'News'
+            text: 'News',
+            key: 'news'
         },
         {
-            theme:'#00aaec',
             link:'',
-            text: 'Gigs'
+            text: 'Gigs',
+            key: 'gigs'
         },
         {
-            theme:'#00a48d',
             link:'',
-            text: 'Bio'
+            text: 'Bio',
+            key: 'bio'
         },
         {
-            theme:'#c885b1',
             link:'/press',
-            text: 'Press'
+            text: 'Press',
+            key: 'press'
         },
         {
-            theme:'#e1287a',
             link:'/photos',
-            text: 'Photos'
+            text: 'Photos',
+            key: 'photos'
         },
         {
-            theme:'#3f147b',
             link:'/hello',
-            text: 'Hello!'
+            text: 'Hello!',
+            key: 'hello'
         }
     ];
 

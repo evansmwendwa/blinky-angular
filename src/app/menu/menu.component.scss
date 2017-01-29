@@ -35,7 +35,38 @@ nav{
                 color: #fff;
                 @include animate(.3s);
 
+                &.active {
+                    &.music{
+                        background: #a11d77;
+                    }
+                    &.videos{
+                        background: #313b72;
+                    }
+                    &.radio{
+                        background: #f9f200;
+                    }
+                    &.news{
+                        background: #9ed2ce;
+                    }
+                    &.gigs{
+                        background: #00aaec;
+                    }
+                    &.bio{
+                        background: #00a48d;
+                    }
+                    &.press{
+                        background: #c885b1;
+                    }
+                    &.photos{
+                        background: #e1287a;
+                    }
+                    &.hello{
+                        background: #3f147b;
+                    }
+                }
+
                 span{
+                    display: block;
                     position: relative;
                 }
 
@@ -47,7 +78,38 @@ nav{
                     height: 100%;
                     left:0;
                     top:0;
+                    background: white;
                     @include animate(.5s);
+                    overflow: hidden;
+                    margin: 0;
+
+                    &.music{
+                        background: #a11d77;
+                    }
+                    &.videos{
+                        background: #313b72;
+                    }
+                    &.radio{
+                        background: #f9f200;
+                    }
+                    &.news{
+                        background: #9ed2ce;
+                    }
+                    &.gigs{
+                        background: #00aaec;
+                    }
+                    &.bio{
+                        background: #00a48d;
+                    }
+                    &.press{
+                        background: #c885b1;
+                    }
+                    &.photos{
+                        background: #e1287a;
+                    }
+                    &.hello{
+                        background: #3f147b;
+                    }
                 }
 
                 &:hover{
