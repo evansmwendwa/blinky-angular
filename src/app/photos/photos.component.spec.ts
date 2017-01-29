@@ -2,6 +2,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
+import { MasonryModule } from 'angular2-masonry';
 
 import { PhotosComponent } from './photos.component';
 
@@ -11,6 +12,7 @@ describe('PhotosComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
+            imports: [MasonryModule],
             declarations: [PhotosComponent]
         })
             .compileComponents();
