@@ -20,8 +20,14 @@
         overflow-y: scroll;
     }
 
-    @media(min-width: 1600px) {
-        width: 65%;
+    &.spaced{
+        @media(min-width: 1024px) {
+            width: 50%;
+        }
+
+        @media(min-width: 1600px) {
+            width: 55%;
+        }
     }
 
     .list-container{

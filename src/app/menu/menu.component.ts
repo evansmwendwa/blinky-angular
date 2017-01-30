@@ -21,7 +21,7 @@ export class MenuComponent implements OnInit {
         {
             link:'/radio',
             text: 'Radio',
-            key: 'radio'
+            key: 'radio-station'
         },
         {
             link:'/news',

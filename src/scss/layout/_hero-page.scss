@@ -17,6 +17,17 @@
         height: 100%;
     }
 
+    &.spaced {
+
+        @media(min-width: 1024px) {
+            width: 50%;
+        }
+
+        @media(min-width: 1600px) {
+            width: 55%;
+        }
+    }
+
     &.bio{
         @media(min-width: 1024px) {
             right: auto;
@@ -38,7 +49,16 @@
         }
 
         @media(min-width: 1600px) {
-            width: 35%;
+            padding: $grid-padding2;
+        }
+
+        &.spaced{
+            @media(min-width: 1024px) {
+                width: 50%;
+            }
+            @media(min-width: 1600px) {
+                width: 45%;
+            }
         }
 
         &.bio{

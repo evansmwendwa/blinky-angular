@@ -11,6 +11,10 @@ header{
     @media(min-width: 1024px) {
         padding: 40px 20px 10px 50px;
     }
+
+    @media(min-width: 1600px) {
+        padding: 40px 20px 10px 70px;
+    }
 }
 .topmenu{
     position: relative;
