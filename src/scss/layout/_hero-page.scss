@@ -16,6 +16,13 @@
         width: 60%;
         height: 100%;
     }
+
+    &.bio{
+        @media(min-width: 1024px) {
+            right: auto;
+            left:0;
+        }
+    }
 }
 .page-container{
     .hero-page{
@@ -28,6 +35,11 @@
             left:0;
             width: 40%;
             height: 100%;
+        }
+
+        &.bio{
+            left:auto;
+            right: 0;
         }
 
         .highlight-text{

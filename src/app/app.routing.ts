@@ -12,6 +12,7 @@ import { ArticleComponent } from './news/article/article.component';
 import { PhotosComponent } from './photos/photos.component';
 import { HelloComponent } from './hello/hello.component';
 import { PressComponent } from './press/press.component';
+import { BioComponent } from './bio/bio.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -25,7 +26,8 @@ const routes: Routes = [
     { path: 'news/:id', component: ArticleComponent },
     { path: 'photos', component: PhotosComponent },
     { path: 'hello', component: HelloComponent },
-    { path: 'press', component: PressComponent }
+    { path: 'press', component: PressComponent },
+    { path: 'bio', component: BioComponent }
 ];
 
 @NgModule({

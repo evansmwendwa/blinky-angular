@@ -24,17 +24,12 @@ export class MenuComponent implements OnInit {
             key: 'radio'
         },
         {
-            link:'news',
+            link:'/news',
             text: 'News',
             key: 'news'
         },
         {
-            link:'',
-            text: 'Gigs',
-            key: 'gigs'
-        },
-        {
-            link:'',
+            link:'/bio',
             text: 'Bio',
             key: 'bio'
         },

@@ -1,0 +1,37 @@
+
+.bio-page{
+    max-width: 500px;
+}
+h1{
+    text-transform: uppercase;
+    color: #00a48d;
+    font-size: 150px;
+    font-family: 'wask',gotham, sans-serif;
+    font-weight: bold;
+    margin: 0 0 70px;
+}
+.bio-text{
+    font-family: gotham, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    color:#000;
+    text-transform: uppercase;
+
+    p{
+        line-height: 2.4em;
+        margin: 0 0 30px;
+    }
+}
+.bio-link{
+    text-transform: uppercase;
+    text-decoration: none;
+    color:#3f147b;
+    font-family: wask, gotham, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 30px 0;
+
+    &:hover{
+        text-decoration: line-through;
+    }
+}
