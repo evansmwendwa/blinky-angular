@@ -1,14 +1,43 @@
 
 .bio-page{
     max-width: 500px;
+    padding: 15px;
+
+    @media(min-width: 600px) {
+        padding: 40px;
+    }
+    @media(min-width: 980px) {
+        padding: 55px;
+    }
+
+    @media(min-width: 1600px) {
+        padding: 70px;
+    }
 }
 h1{
     text-transform: uppercase;
     color: #00a48d;
-    font-size: 150px;
+    font-size: 48px;
     font-family: 'wask',gotham, sans-serif;
     font-weight: bold;
-    margin: 0 0 70px;
+    margin: 0 0 30px;
+
+    @media(min-width: 400px) {
+        font-size: 65px;
+    }
+    @media(min-width: 650px) {
+        font-size: 90px;
+        margin: 0 0 50px;
+    }
+
+    @media(min-width: 980px) {
+        font-size: 120px;
+    }
+
+    @media(min-width: 1600px) {
+        font-size: 150px;
+        margin: 0 0 70px;
+    }
 }
 .bio-text{
     font-family: gotham, sans-serif;
@@ -18,8 +47,12 @@ h1{
     text-transform: uppercase;
 
     p{
-        line-height: 2.4em;
+        line-height: 2em;
         margin: 0 0 30px;
+
+        @media(min-width: 1200px) {
+            line-height: 2.4em;
+        }
     }
 }
 .bio-link{
@@ -27,9 +60,17 @@ h1{
     text-decoration: none;
     color:#3f147b;
     font-family: wask, gotham, sans-serif;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
     margin: 30px 0;
+
+    @media(min-width: 420px) {
+        font-size: 26px;
+    }
+
+    @media(min-width: 650px) {
+        font-size: 30px;
+    }
 
     &:hover{
         text-decoration: line-through;

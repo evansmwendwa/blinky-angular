@@ -12,10 +12,18 @@
 
         h1{
             text-transform: uppercase;
-            font-size: 36px;
+            font-size: 26px;
             font-weight: 200;
             line-height: 1.3em;
             max-width: 860px;
+
+            @media(min-width: 500px) {
+                font-size: 30px;
+            }
+
+            @media(min-width: 700px) {
+                font-size: 36px;
+            }
         }
 
         .release-date{
@@ -40,9 +48,17 @@
 
         .article-contents{
             font-family: "Times New Roman", times, serif;
-            font-size: 24px;
+            font-size: 18px;
             line-height: 1.6em;
             padding: 50px 0;
+
+            @media(min-width: 500px) {
+                font-size: 20px;
+            }
+
+            @media(min-width: 700px) {
+                font-size: 24px;
+            }
 
             p{
                 margin-bottom: 35px;

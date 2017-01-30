@@ -37,6 +37,10 @@
             height: 100%;
         }
 
+        @media(min-width: 1600px) {
+            width: 35%;
+        }
+
         &.bio{
             left:auto;
             right: 0;

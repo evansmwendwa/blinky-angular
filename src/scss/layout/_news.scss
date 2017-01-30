@@ -60,9 +60,9 @@
     padding: 45px 0;
     a{
         display: block;
-        width: 170px;
-        height: 170px;
-        line-height: 170px;
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
         text-align: center;
         font-family: wask, gotham, sans-serif;
         font-size: 18px;
@@ -74,8 +74,13 @@
         text-decoration: none;
         margin: 0 auto;
         text-transform: uppercase;
-
         @include animate(.25s);
+
+        @media(min-width: 700px) {
+            width: 170px;
+            height: 170px;
+            line-height: 170px;
+        }
 
         &:hover{
             background: #000;
@@ -103,15 +108,21 @@
         display: inline-block;
         text-decoration: none;
         border-radius: 50%;
-        width: 70px;
-        height: 70px;
-        line-height: 70px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
         text-align: center;
         margin: 0 15px 0 0;
         border: 1px solid #000;
         color:#000;
         font-size: 20px;
         @include animate(.25s);
+
+        @media(min-width: 1024px) {
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+        }
 
         &:hover{
             background: #000;

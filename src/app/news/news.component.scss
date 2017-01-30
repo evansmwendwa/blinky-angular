@@ -15,14 +15,21 @@
             font-family: wask, sans-serif;
             font-style: italic;
             font-weight: bold;
-            font-size: 72px;
+            font-size: 32px;
             margin: 0 0 30px;
+
+            @media(min-width: 400px) {
+                font-size: 42px;
+            }
+
+            @media(min-width: 700px) {
+                font-size: 72px;
+            }
 
             span{
                 color:#b7b7b7;
             }
         }
-
 
     }
 }
