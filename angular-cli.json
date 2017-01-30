@@ -21,6 +21,7 @@
         "styles.scss"
       ],
       "scripts": [
+          "../node_modules/imagesloaded/imagesloaded.pkgd.js"
       ],
       "environments": {
         "source": "environments/environment.ts",

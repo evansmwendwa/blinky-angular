@@ -1,7 +1,7 @@
 <div class="container-fluid pictures-page">
     <div class="container-fluid masonry-container">
         <h1>Blinkybill<span>photos</span></h1>
-        <masonry>
+        <masonry [useImagesLoaded]="true">
             <masonry-brick class="brick" *ngFor="let image of images">
                 <img [src]="image"  />
             </masonry-brick>
