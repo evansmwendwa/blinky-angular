@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuService } from './menu.service';
 
 @Component({
     selector: 'site-menu',
@@ -50,7 +51,7 @@ export class MenuComponent implements OnInit {
         }
     ];
 
-    constructor() { }
+    constructor(public menuService:MenuService) { }
 
     ngOnInit() {
     }

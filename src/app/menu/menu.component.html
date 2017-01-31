@@ -1,4 +1,4 @@
-<nav>
+<nav class="active-{{menuService.menuExpanded}}">
     <ul>
         <li *ngFor="let link of links">
             <a [routerLink]="link.link" [routerLinkActiveOptions]="{exact:true}"

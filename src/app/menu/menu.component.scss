@@ -1,5 +1,15 @@
 @import "src/scss/index";
+@keyframes listshake {
+    0% {
+        opacity: 0;
+        margin-top: 40px;
+    }
 
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
 nav{
     position: fixed;
     top:0;
@@ -8,19 +18,25 @@ nav{
     background: #000;
     color:#fff;
     text-transform: uppercase;
-    width: 80%;
+    width: 0;
     max-width: 380px;
+    overflow: hidden;
+    @include animate(.35s);
 
-    @media(min-width: 990px) {
-        max-width: 450px;
-    }
+    &.active-true {
+        width: 80%;
 
-    @media(min-width: 1230px) {
-        max-width: 40%;
+        @media(min-width: 990px) {
+            max-width: 450px;
+        }
+
+        @media(min-width: 1230px) {
+            max-width: 40%;
+        }
     }
 
     ul{
-        padding: 0 0 0 0;
+        padding: 0;
         list-style: none;
         margin: 100px 0 25px;
 
@@ -42,6 +58,8 @@ nav{
                 font-size: 18px;
                 padding: 20px 20px 20px 70px;
                 color: #fff;
+                height: 65px;
+                overflow: hidden;
                 @include animate(.3s);
 
                 @media(min-width: 1230px) {
@@ -133,6 +151,21 @@ nav{
                     text-indent: 25px;
                     i{
                         width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &.active-true {
+        ul{
+            li{
+                a{
+                    span{
+                        opacity: 0;
+                        margin-top:40px;
+                        animation: listshake .5s .2s 1 linear normal;
+                        animation-fill-mode:forwards;
                     }
                 }
             }
