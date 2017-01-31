@@ -10,6 +10,8 @@ import { MasonryModule } from 'angular2-masonry';
 // import services
 import { StateService } from './core';
 import { MenuService } from './menu/menu.service';
+import { MessageService, HttpClient, ConfigService } from './shared';
+import { PhotosService } from './photos/photos.service';
 
 // import pipes
 
@@ -60,8 +62,12 @@ import { BioComponent } from './bio/bio.component';
         BioComponent
     ],
     providers: [
+        MessageService,
+        HttpClient,
         StateService,
-        MenuService
+        ConfigService,
+        MenuService,
+        PhotosService
     ],
     exports: [
         AppRoutingModule

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PhotosService } from './photos.service';
 
 @Component({
     selector: 'app-photos',
@@ -7,15 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhotosComponent implements OnInit {
 
-    public images = [];
-
-    constructor() { }
+    constructor(public photoService:PhotosService) {
+        photoService.getPhotos();
+    }
 
     ngOnInit() {
-        let i:number;
-        for(i=1;i<=20;i++) {
-            this.images.push('/assets/images/masonry/'+i+'.jpg');
-        }
+
     }
 
 }
