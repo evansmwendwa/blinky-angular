@@ -34,6 +34,7 @@ import { PhotosComponent } from './photos/photos.component';
 import { HelloComponent } from './hello/hello.component';
 import { PressComponent } from './press/press.component';
 import { BioComponent } from './bio/bio.component';
+import { AnimationComponent } from './animation/animation.component';
 
 @NgModule({
     imports: [
@@ -59,7 +60,8 @@ import { BioComponent } from './bio/bio.component';
         PhotosComponent,
         HelloComponent,
         PressComponent,
-        BioComponent
+        BioComponent,
+        AnimationComponent
     ],
     providers: [
         MessageService,

@@ -1,4 +1,4 @@
-@import "src/scss/index";
+@import "src/scss/mixins";
 @keyframes listshake {
     0% {
         opacity: 0;
@@ -31,7 +31,11 @@ nav{
         }
 
         @media(min-width: 1230px) {
-            max-width: 40%;
+            max-width: 50%;
+        }
+
+        @media(min-width: 1600px) {
+            max-width: 45%;
         }
     }
 
@@ -164,7 +168,7 @@ nav{
                     span{
                         opacity: 0;
                         margin-top:40px;
-                        animation: listshake .5s .2s 1 linear normal;
+                        animation: listshake .2s .2s 1 linear normal;
                         animation-fill-mode:forwards;
                     }
                 }
