@@ -35,6 +35,10 @@
                 a{
                     color:#000;
                     margin-right: 20px;
+
+                    &:hover{
+                        text-decoration: line-through;
+                    }
                 }
 
             }
@@ -98,6 +102,7 @@
             padding: 30px 0;
 
             a{
+                position: relative;
                 display: block;
                 width: 100%;
                 max-width: 190px;
@@ -111,9 +116,27 @@
                 text-decoration: none;
                 @include animate(.25s);
 
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    width: 0;
+                    height: 100%;
+                    background: #000;
+                    @include animate(.25s);
+                }
+
+                span{
+                    position: relative;
+                }
+
                 &:hover{
-                    background: #231f20;
                     color:#fff;
+
+                    &:before{
+                        width: 100%;
+                    }
                 }
             }
         }
