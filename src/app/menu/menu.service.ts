@@ -6,6 +6,7 @@ import 'rxjs/add/operator/filter';
 export class MenuService {
 
     public menuExpanded = false;
+    public hoveredMenu = 'home';
 
     constructor(private router:Router) {
         router.events.filter(
@@ -16,6 +17,10 @@ export class MenuService {
 
     toggleMenu() {
         this.menuExpanded = !this.menuExpanded;
+    }
+
+    highlightPage(page:string) {
+        this.hoveredMenu = page;
     }
 
 }

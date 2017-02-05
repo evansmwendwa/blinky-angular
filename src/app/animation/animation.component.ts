@@ -5,16 +5,6 @@ import { Component, OnInit, Input } from '@angular/core';
     templateUrl: './animation.component.html',
     styleUrls: ['./animation.component.scss']
 })
-export class AnimationComponent implements OnInit {
-
+export class AnimationComponent {
     @Input() page='home';
-
-    constructor() {
-        console.log(this.page);
-    }
-
-    ngOnInit() {
-        console.log(this.page);
-    }
-
 }
