@@ -7,39 +7,17 @@
     <div class="page-contents">
         <div class="container-fluid list-container">
             <h2>Albums &amp; EP's</h2>
-            <div class="container-fluid list-view">
-                <a routerLink="/music/1" class="item">
+            <div class="container-fluid list-view" *ngIf="musicService.response.results">
+
+                <a routerLink="/music/{{ item.collectionId }}" class="item" *ngFor="let item of musicService.response.results | slice:1">
                     <div class="item-image">
-                        <img src="/assets/images/music/winging.jpg" />
+                        <img [src]="musicService.formatFilename(item.artworkUrl100)" />
                     </div>
-                    <h3>Everyone’s winging it &amp; other fly tales</h3>
-                    <div class="tracks-count">13 Tracks</div>
-                    <div class="release-date">(2016)</div>
+                    <h3>{{ item.collectionName }}</h3>
+                    <div class="tracks-count">{{ item.trackCount }} Track<span *ngIf="item.trackCount > 1">s</span></div>
+                    <div class="release-date">({{ item.releaseDate | date:'y' }})</div>
                 </a>
-                <a routerLink="/music/1" class="item">
-                    <div class="item-image">
-                        <img src="/assets/images/music/im-feeling-it.jpg" />
-                    </div>
-                    <h3>Everyone’s winging it &amp; other fly tales</h3>
-                    <div class="tracks-count">13 Tracks</div>
-                    <div class="release-date">(2016)</div>
-                </a>
-                <a routerLink="/music/1" class="item">
-                    <div class="item-image">
-                        <img src="/assets/images/music/we-cut-keys.jpg" />
-                    </div>
-                    <h3>Everyone’s winging it &amp; other fly tales</h3>
-                    <div class="tracks-count">13 Tracks</div>
-                    <div class="release-date">(2016)</div>
-                </a>
-                <a routerLink="/music/1" class="item">
-                    <div class="item-image">
-                        <img src="/assets/images/music/we-cut-keys-2.jpg" />
-                    </div>
-                    <h3>Everyone’s winging it &amp; other fly tales</h3>
-                    <div class="tracks-count">13 Tracks</div>
-                    <div class="release-date">(2016)</div>
-                </a>
+
             </div>
         </div>
     </div>
