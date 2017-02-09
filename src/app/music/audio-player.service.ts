@@ -11,8 +11,8 @@ export class AudioPlayer {
         this.player = new Audio();
         let self = this;
         this.player.onpause = function() {
-            self.player.src = '';
-            self.src = '';
+            //self.player.src = '';
+            //self.src = '';
             self.playing = false;
         }
     }

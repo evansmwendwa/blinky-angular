@@ -39,11 +39,11 @@
                 <ul>
                     <li *ngFor="let track of musicService.tracks">
 
-                        <div class="track-preview" (click)="audioPlayer.play(track.previewUrl)" *ngIf="audioPlayer.src !== track.previewUrl">
+                        <div class="track-preview" (click)="audioPlayer.play(track.previewUrl)" *ngIf="!audioPlayer.playing || audioPlayer.src !== track.previewUrl">
                             <i></i> <span class="glyphicon glyphicon-play"></span>
                         </div>
 
-                        <div class="track-preview" (click)="audioPlayer.pause()" *ngIf="audioPlayer.src === track.previewUrl">
+                        <div class="track-preview" (click)="audioPlayer.pause()" *ngIf="audioPlayer.src === track.previewUrl && audioPlayer.playing">
                             <i></i> <span class="glyphicon glyphicon-pause"></span>
                         </div>
 
