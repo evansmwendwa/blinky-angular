@@ -1,0 +1,241 @@
+@import "src/scss/mixins";
+
+.c-player {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #000;
+    cursor: pointer;
+    color: #fff;
+
+    .c-player-button{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height:100%;
+        vertical-align: middle;
+        text-align: center;
+        background: #000;
+        border-radius: 50%;
+        color:#fff;
+        z-index:2;
+        line-height: 55px;
+        @include animate(.25s);
+
+        &.pause{
+            opacity: 0;
+        }
+    }
+
+    &:hover{
+        .c-player-button {
+            opacity: 1;
+        }
+    }
+
+    .c-player-animation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+
+    ul {
+        position: absolute;
+        padding: 0;
+        top: 50%;
+        left: 50%;
+        width: 25px;
+        height: 25px;
+        margin: -12px 0 0 -9px;
+        list-style: none;
+        text-align: center;
+        vertical-align: bottom;
+        transform: rotateX(180deg);
+
+        li {
+            display: block;
+            height: 80%;
+            width: 2px;
+            background: #fff;
+            text-align: center;
+            float: left;
+            margin: 0 2px 0 0;
+
+            &:nth-child(1) {
+                animation: bar1 1.8s linear infinite;
+            }
+
+            &:nth-child(2) {
+                animation: bar2 1.8s linear 200ms infinite;
+            }
+
+            &:nth-child(3) {
+                animation: bar3 1.8s linear 300ms infinite;
+            }
+
+            &:nth-child(4) {
+                animation: bar4 1.8s linear 400ms infinite;
+            }
+
+            &:nth-child(5) {
+                animation: bar5 1.8s linear 500ms infinite;
+            }
+        }
+    }
+}
+@keyframes bar1 {
+    0% {
+        height: 50%;
+    }
+
+    24% {
+        height: 65%;
+    }
+
+    48% {
+        height: 80%;
+    }
+
+    66% {
+        height: 55%;
+    }
+
+    78% {
+        height: 100%;
+    }
+
+    89% {
+        height: 78%;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+@keyframes bar2 {
+    0% {
+        height: 23%;
+    }
+
+    24% {
+        height: 85%;
+    }
+
+    48% {
+        height: 60%;
+    }
+
+    66% {
+        height: 100%;
+    }
+
+    78% {
+        height: 72%;
+    }
+
+    89% {
+        height: 18%;
+    }
+
+    100% {
+        height: 23%;
+    }
+}
+@keyframes bar3 {
+    0% {
+        height: 23%;
+    }
+
+    24% {
+        height: 100%;
+    }
+
+    48% {
+        height: 60%;
+    }
+
+    66% {
+        height: 100%;
+    }
+
+    78% {
+        height: 72%;
+    }
+
+    89% {
+        height: 18%;
+    }
+
+    100% {
+        height: 23%;
+    }
+}
+@keyframes bar4 {
+    0% {
+        height: 83%;
+    }
+
+    24% {
+        height: 25%;
+    }
+
+    48% {
+        height: 100%;
+    }
+
+    66% {
+        height: 65%;
+    }
+
+    78% {
+        height: 100%;
+    }
+
+    89% {
+        height: 28%;
+    }
+
+    100% {
+        height: 83%;
+    }
+}
+@keyframes bar5 {
+    0% {
+        height: 55%;
+    }
+
+    24% {
+        height: 85%;
+    }
+
+    48% {
+        height: 0;
+    }
+
+    66% {
+        height: 65%;
+    }
+
+    78% {
+        height: 32%;
+    }
+
+    89% {
+        height: 28%;
+    }
+
+    100% {
+        height: 55%;
+    }
+}

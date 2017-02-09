@@ -1,0 +1,18 @@
+<div class="c-player" *ngIf="audioPlayer.src.length > 0">
+    <div class='c-player-animation' *ngIf="audioPlayer.playing">
+        <ul>
+            <li class="bar"></li>
+            <li class="bar"></li>
+            <li class="bar"></li>
+            <li class="bar"></li>
+            <li class="bar"></li>
+        </ul>
+    </div>
+    <div class="c-player-button pause" *ngIf="audioPlayer.playing" (click)="audioPlayer.pause()">
+        <span class="glyphicon glyphicon-pause"></span>
+    </div>
+
+    <div class="c-player-button play" *ngIf="!audioPlayer.playing" (click)="audioPlayer.play()">
+        <span class="glyphicon glyphicon-play"></span>
+    </div>
+</div>
