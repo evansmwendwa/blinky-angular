@@ -12,6 +12,7 @@ import { StateService } from './core';
 import { MenuService } from './menu/menu.service';
 import { MessageService, HttpClient, ConfigService } from './shared';
 import { PhotosService } from './photos/photos.service';
+import { MusicService, AudioPlayer } from './music';
 
 // import pipes
 
@@ -69,7 +70,9 @@ import { AnimationComponent } from './animation/animation.component';
         StateService,
         ConfigService,
         MenuService,
-        PhotosService
+        PhotosService,
+        MusicService,
+        AudioPlayer
     ],
     exports: [
         AppRoutingModule
