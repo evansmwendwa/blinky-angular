@@ -1,8 +1,10 @@
 <div class="container-fluid album-page">
-    <div class="container-fluid album-view">
+    <div class="container-fluid album-view" *ngIf="musicService.album.wrapperType">
 
         <div class="album-stage">
-            <img src="/assets/images/music/we-cut-keys-2.jpg"  />
+            <div class="album-image">
+                <img [src]="musicService.formatFilename(musicService.album.artworkUrl100)"  />
+            </div>
             <div class="shares">
                 <div class="text-label">Share on</div>
                 <div class="share-links">
@@ -18,17 +20,36 @@
         </div>
 
         <div class="album-details">
-            <h2>we cut keys while you wait</h2>
-            <div class="tracks-count">(6 tracks) (2017)</div>
+            <h2>{{ musicService.album.collectionName }}</h2>
+            <div class="tracks-count">( {{ musicService.album.trackCount }} track<i *ngIf="musicService.album.trackCount > 1">s</i>) ({{musicService.album.releaseDate|date:'y'}})</div>
             <div class="release-date">
                 EP release date:<br />
-                26 August 2016
+                {{ musicService.album.releaseDate|date }}
             </div>
 
-            <div class="shop-links">
-                <a href="#" target="_blank"><span>Itunes</span></a>
+            <div class="shop-links container-fluid">
+                <a [href]="musicService.album.collectionViewUrl" target="_blank"><span>Itunes</span></a>
+                <!--
                 <a href="#" target="_blank"><span>Soundcloud</span></a>
                 <a href="#" target="_blank"><span>Spotify</span></a>
+                -->
+            </div>
+
+            <div class="album-tracks container-fluid">
+                <ul>
+                    <li *ngFor="let track of musicService.tracks">
+
+                        <div class="track-preview" (click)="audioPlayer.play(track.previewUrl)" *ngIf="audioPlayer.src !== track.previewUrl">
+                            <i></i> <span class="glyphicon glyphicon-play"></span>
+                        </div>
+
+                        <div class="track-preview" (click)="audioPlayer.pause()" *ngIf="audioPlayer.src === track.previewUrl">
+                            <i></i> <span class="glyphicon glyphicon-pause"></span>
+                        </div>
+
+                        <span class="track-name">{{ track.trackName }}</span>
+                    </li>
+                </ul>
             </div>
         </div>
 
