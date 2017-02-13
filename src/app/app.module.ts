@@ -13,6 +13,8 @@ import { MenuService } from './menu/menu.service';
 import { MessageService, HttpClient, ConfigService } from './shared';
 import { PhotosService } from './photos/photos.service';
 import { MusicService, AudioPlayer } from './music';
+import { VideoService } from './videos/video.service';
+import { RadioService } from './radio/radio.service';
 
 // import pipes
 
@@ -36,6 +38,7 @@ import { HelloComponent } from './hello/hello.component';
 import { PressComponent } from './press/press.component';
 import { BioComponent } from './bio/bio.component';
 import { AnimationComponent } from './animation/animation.component';
+import { PlayerComponent } from './music/player/player.component';
 
 @NgModule({
     imports: [
@@ -62,7 +65,8 @@ import { AnimationComponent } from './animation/animation.component';
         HelloComponent,
         PressComponent,
         BioComponent,
-        AnimationComponent
+        AnimationComponent,
+        PlayerComponent
     ],
     providers: [
         MessageService,
@@ -72,7 +76,9 @@ import { AnimationComponent } from './animation/animation.component';
         MenuService,
         PhotosService,
         MusicService,
-        AudioPlayer
+        AudioPlayer,
+        VideoService,
+        RadioService
     ],
     exports: [
         AppRoutingModule
