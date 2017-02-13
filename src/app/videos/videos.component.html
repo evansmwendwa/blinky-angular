@@ -8,34 +8,15 @@
         <div class="container-fluid list-container">
             <h2>Videos</h2>
             <div class="container-fluid list-view">
-                <a routerLink="/videos/1" class="item">
+
+                <a *ngFor="let video of videoService.videos" routerLink="/videos/{{ video.id }}" class="item" >
                     <div class="item-image">
-                        <img src="/assets/images/fellows.jpg" />
+                        <img [src]="video.image_name" />
                     </div>
-                    <h3>Everyone’s winging it &amp; other fly tales</h3>
-                    <div class="release-date">(2016)</div>
+                    <h3>{{ video.title }}</h3>
+                    <div class="release-date">({{ video.release_year }})</div>
                 </a>
-                <a routerLink="/videos/1" class="item">
-                    <div class="item-image">
-                        <img src="/assets/images/iko-nini.jpg" />
-                    </div>
-                    <h3>Everyone’s winging it &amp; other fly tales</h3>
-                    <div class="release-date">(2016)</div>
-                </a>
-                <a routerLink="/videos/1" class="item">
-                    <div class="item-image">
-                        <img src="/assets/images/iko-nini.jpg" />
-                    </div>
-                    <h3>Everyone’s winging it &amp; other fly tales</h3>
-                    <div class="release-date">(2016)</div>
-                </a>
-                <a routerLink="/videos/1" class="item">
-                    <div class="item-image">
-                        <img src="/assets/images/fellows.jpg" />
-                    </div>
-                    <h3>Everyone’s winging it &amp; other fly tales</h3>
-                    <div class="release-date">(2016)</div>
-                </a>
+
             </div>
         </div>
     </div>

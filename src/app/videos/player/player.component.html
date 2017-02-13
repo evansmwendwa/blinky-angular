@@ -1,29 +1,22 @@
 <div class="container-fluid video-page">
-    <div class="video-player container-fluid">
+    <div class="video-player container-fluid" *ngIf="videoService.video.data">
         <div class="container-fluid page-video">
             <div class="container-fluid video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/KTZCVgNQpmw?modestbranding=1&autoplay=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="315" [src]="videoService.video.data.embed_url" frameborder="0" allowfullscreen></iframe>
             </div>
             <div class="video-info">
-                <h2>I’m feelin’ it</h2>
-                <div class="release-date">2016</div>
+                <h2>{{ videoService.video.data.title }}</h2>
+                <div class="release-date">{{ videoService.video.data.release_year }}</div>
             </div>
         </div>
 
         <div class="container-fluid list-container related-videos">
-            <a routerLink="/videos/1" class="item">
+            <a *ngFor="let video of videoService.video.related" routerLink="/videos/{{video.id}}" class="item">
                 <div class="item-image">
-                    <img src="/assets/images/fellows.jpg" />
+                    <img [src]="video.image_name" />
                 </div>
-                <h3>Everyone’s winging it &amp; other fly tales</h3>
-                <div class="release-date">(2016)</div>
-            </a>
-            <a routerLink="/videos/1" class="item">
-                <div class="item-image">
-                    <img src="/assets/images/iko-nini.jpg" />
-                </div>
-                <h3>Everyone’s winging it &amp; other fly tales</h3>
-                <div class="release-date">(2016)</div>
+                <h3>{{video.title}}</h3>
+                <div class="release-date">({{video.release_year}})</div>
             </a>
         </div>
     </div>

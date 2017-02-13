@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VideoService } from './video.service';
 
 @Component({
     selector: 'app-videos',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideosComponent implements OnInit {
 
-    constructor() { }
+    constructor(public videoService:VideoService) {
+        videoService.getVideos();
+    }
 
     ngOnInit() {
     }
