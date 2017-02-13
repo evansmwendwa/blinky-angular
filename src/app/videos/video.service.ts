@@ -40,8 +40,7 @@ export class VideoService {
         .subscribe(
             response => {
                 response.data.embed_url = this.sanitizedEmbed(response.data.url),
-                this.video = response,
-                console.log(this.video)
+                this.video = response
             },
             err => console.log(err)
         );
