@@ -1,8 +1,10 @@
 <div class="container-fluid album-page">
-    <div class="container-fluid album-view">
+    <div class="container-fluid album-view" *ngIf="radioService.episode.id">
 
         <div class="album-stage">
-            <img src="/assets/images/radio/scenary.jpg"  />
+            <div class="iframe-box-container">
+                <iframe width="500" height="500" frameborder="0" [src]="radioService.episode.embed_url"></iframe>
+            </div>
             <div class="shares">
                 <div class="text-label">Share on</div>
                 <div class="share-links">
@@ -18,13 +20,12 @@
         </div>
 
         <div class="album-details">
-            <h2>Scenery: Nairobi w/ blinky bill</h2>
-            <div class="tracks-count">(6 tracks) (2017)</div>
+            <h2>{{ radioService.episode.title }}</h2>
+            <div class="tracks-count">({{ radioService.episode.tracks }} tracks) ({{radioService.episode.release_year}})</div>
             <div class="release-date">
-                March<br />
-                (2016)
+                {{ radioService.episode.release_month }}<br />
+                ({{ radioService.episode.release_year }})
             </div>
-
         </div>
 
     </div>

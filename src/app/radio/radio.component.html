@@ -7,38 +7,14 @@
     <div class="page-contents">
         <div class="container-fluid list-container">
             <h2>blinky x rbma radio</h2>
-            <div class="container-fluid list-view">
-                <a routerLink="/radio/1" class="item">
+            <div class="container-fluid list-view" >
+                <a *ngFor="let episode of radioService.episodes" routerLink="/radio/{{episode.id}}" class="item">
                     <div class="item-image">
-                        <img src="/assets/images/radio/august.jpg" />
+                        <img [src]="episode.image_name" />
                     </div>
-                    <h3>Everyone’s winging it &amp; other fly tales</h3>
-                    <div class="tracks-count">December</div>
-                    <div class="release-date">(2016)</div>
-                </a>
-                <a routerLink="/radio/1" class="item">
-                    <div class="item-image">
-                        <img src="/assets/images/radio/dec.jpg" />
-                    </div>
-                    <h3>Everyone’s winging it &amp; other fly tales</h3>
-                    <div class="tracks-count">July</div>
-                    <div class="release-date">(2016)</div>
-                </a>
-                <a routerLink="/radio/1" class="item">
-                    <div class="item-image">
-                        <img src="/assets/images/radio/july.jpg" />
-                    </div>
-                    <h3>Everyone’s winging it &amp; other fly tales</h3>
-                    <div class="tracks-count">August</div>
-                    <div class="release-date">(2016)</div>
-                </a>
-                <a routerLink="/radio/1" class="item">
-                    <div class="item-image">
-                        <img src="/assets/images/radio/march.jpg" />
-                    </div>
-                    <h3>Everyone’s winging it &amp; other fly tales</h3>
-                    <div class="tracks-count">September</div>
-                    <div class="release-date">(2016)</div>
+                    <h3>{{ radioService.title }}</h3>
+                    <div class="tracks-count">{{ episode.release_month }}</div>
+                    <div class="release-date">({{ episode.release_year }})</div>
                 </a>
             </div>
         </div>

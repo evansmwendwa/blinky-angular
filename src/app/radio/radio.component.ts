@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RadioService } from './radio.service';
 
 @Component({
     selector: 'app-radio',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RadioComponent implements OnInit {
 
-    constructor() { }
+    constructor(public radioService:RadioService) {
+        this.radioService.getEpisodes();
+    }
 
     ngOnInit() {
     }
