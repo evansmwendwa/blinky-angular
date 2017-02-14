@@ -7,82 +7,12 @@
     <div class="page-contents">
         <div class="container-fluid list-container">
             <h2>What the world thinks of Blinky bill</h2>
-            <div class="links-list container-fluid">
-                <a href="#" class="press-link">
+            <div class="links-list container-fluid" *ngIf="pressService.links">
+                <a *ngFor="let link of pressService.links" [href]="link.url" class="press-link">
                     <div class="link-text">
-                        KENYAN ELECTRO-FUNK ROCKER BILL "BLINKY" SELLANGA ON THE AFRICAN MUSIC YOU NEED TO HEAR
+                        {{ link.title }}
                     </div>
-                    <div class="link-site">papermag.com</div>
-                    <div class="hover-line"></div>
-                </a>
-                <a href="#" class="press-link">
-                    <div class="link-text">
-                        KENYAN ELECTRO-FUNK ROCKER BILL "BLINKY" SELLANGA ON THE AFRICAN MUSIC YOU NEED TO HEAR
-                    </div>
-                    <div class="link-site">papermag.com</div>
-                    <div class="hover-line"></div>
-                </a>
-                <a href="#" class="press-link">
-                    <div class="link-text">
-                        KENYAN ELECTRO-FUNK ROCKER BILL "BLINKY" SELLANGA ON THE AFRICAN MUSIC YOU NEED TO HEAR
-                    </div>
-                    <div class="link-site">papermag.com</div>
-                    <div class="hover-line"></div>
-                </a>
-                <a href="#" class="press-link">
-                    <div class="link-text">
-                        KENYAN ELECTRO-FUNK ROCKER BILL "BLINKY" SELLANGA ON THE AFRICAN MUSIC YOU NEED TO HEAR
-                    </div>
-                    <div class="link-site">papermag.com</div>
-                    <div class="hover-line"></div>
-                </a>
-                <a href="#" class="press-link">
-                    <div class="link-text">
-                        KENYAN ELECTRO-FUNK ROCKER BILL "BLINKY" SELLANGA ON THE AFRICAN MUSIC YOU NEED TO HEAR
-                    </div>
-                    <div class="link-site">papermag.com</div>
-                    <div class="hover-line"></div>
-                </a>
-                <a href="#" class="press-link">
-                    <div class="link-text">
-                        KENYAN ELECTRO-FUNK ROCKER BILL "BLINKY" SELLANGA ON THE AFRICAN MUSIC YOU NEED TO HEAR
-                    </div>
-                    <div class="link-site">papermag.com</div>
-                    <div class="hover-line"></div>
-                </a>
-                <a href="#" class="press-link">
-                    <div class="link-text">
-                        KENYAN ELECTRO-FUNK ROCKER BILL "BLINKY" SELLANGA ON THE AFRICAN MUSIC YOU NEED TO HEAR
-                    </div>
-                    <div class="link-site">papermag.com</div>
-                    <div class="hover-line"></div>
-                </a>
-                <a href="#" class="press-link">
-                    <div class="link-text">
-                        KENYAN ELECTRO-FUNK ROCKER BILL "BLINKY" SELLANGA ON THE AFRICAN MUSIC YOU NEED TO HEAR
-                    </div>
-                    <div class="link-site">papermag.com</div>
-                    <div class="hover-line"></div>
-                </a>
-                <a href="#" class="press-link">
-                    <div class="link-text">
-                        KENYAN ELECTRO-FUNK ROCKER BILL "BLINKY" SELLANGA ON THE AFRICAN MUSIC YOU NEED TO HEAR
-                    </div>
-                    <div class="link-site">papermag.com</div>
-                    <div class="hover-line"></div>
-                </a>
-                <a href="#" class="press-link">
-                    <div class="link-text">
-                        KENYAN ELECTRO-FUNK ROCKER BILL "BLINKY" SELLANGA ON THE AFRICAN MUSIC YOU NEED TO HEAR
-                    </div>
-                    <div class="link-site">papermag.com</div>
-                    <div class="hover-line"></div>
-                </a>
-                <a href="#" class="press-link">
-                    <div class="link-text">
-                        KENYAN ELECTRO-FUNK ROCKER BILL "BLINKY" SELLANGA ON THE AFRICAN MUSIC YOU NEED TO HEAR
-                    </div>
-                    <div class="link-site">papermag.com</div>
+                    <div class="link-site">{{ extractDomain(link.url) }}</div>
                     <div class="hover-line"></div>
                 </a>
             </div>
