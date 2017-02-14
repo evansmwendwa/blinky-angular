@@ -8,7 +8,7 @@
         <div class="container-fluid list-container">
             <h2>What the world thinks of Blinky bill</h2>
             <div class="links-list container-fluid" *ngIf="pressService.links">
-                <a *ngFor="let link of pressService.links" [href]="link.url" class="press-link">
+                <a *ngFor="let link of pressService.links" [href]="link.url" class="press-link" target="_blank">
                     <div class="link-text">
                         {{ link.title }}
                     </div>
