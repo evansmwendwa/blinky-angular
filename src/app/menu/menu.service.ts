@@ -6,7 +6,7 @@ import 'rxjs/add/operator/filter';
 export class MenuService {
 
     public menuExpanded = false;
-    public hoveredMenu = 'home';
+    public hoveredMenu = '';
 
     constructor(private router:Router) {
         router.events.filter(
