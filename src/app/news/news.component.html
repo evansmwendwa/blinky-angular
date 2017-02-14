@@ -2,13 +2,14 @@
     <div class="container-fluid news-container">
         <h1>Blinktank<span>blog</span></h1>
         <div class="container-fluid news-list">
-            <a routerLink="/news/{{ item.id }}" class="news-item" *ngFor="let item of news">
-                <img [src]="item.image"  />
-                <h3>{{ item.title }}</h3>
+            <a *ngFor="let article of newsService.articles" routerLink="/news/{{ article.id }}" class="news-item" >
+                <img [src]="article.image_name"  />
+                <h3>{{ article.title }}</h3>
             </a>
         </div>
         <div class="container-fluid news-more">
-            <a routerLink="/news">Load more</a>
+            <span class="more-articles loader" *ngIf="!newsService.busy && newsService.pagination.next_page > 0" (click)="nextPage()">Load more</span>
+            <span class="more-articles" *ngIf="newsService.busy">Please wait...</span>
         </div>
     </div>
 </div>

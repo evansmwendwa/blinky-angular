@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsService } from './news.service';
 
 @Component({
     selector: 'app-news',
@@ -9,7 +10,21 @@ export class NewsComponent implements OnInit {
 
     public news: any = [];
 
-    constructor() { }
+    constructor(public newsService:NewsService) {
+        if(this.newsService.articles.length < 1) {
+            this.newsService.getArticles();
+        }
+    }
+
+    nextPage() {
+        if(this.newsService.pagination.hasOwnProperty('next_page')) {
+            let nextPage = this.newsService.pagination.next_page;
+
+            if(nextPage > 0) {
+                this.newsService.getArticles(nextPage);
+            }
+        }
+    }
 
     ngOnInit() {
         let i:number;

@@ -16,6 +16,7 @@ import { MusicService, AudioPlayer } from './music';
 import { VideoService } from './videos/video.service';
 import { RadioService } from './radio/radio.service';
 import { PressService } from './press/press.service';
+import { NewsService } from './news/news.service';
 
 // import pipes
 
@@ -80,7 +81,8 @@ import { PlayerComponent } from './music/player/player.component';
         AudioPlayer,
         VideoService,
         RadioService,
-        PressService
+        PressService,
+        NewsService
     ],
     exports: [
         AppRoutingModule

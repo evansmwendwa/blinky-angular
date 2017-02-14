@@ -1,34 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsService } from '../news.service';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import 'rxjs/add/operator/switchMap';
 
 @Component({
     selector: 'news-article',
     templateUrl: './article.component.html',
     styleUrls: ['./article.component.scss']
 })
-export class ArticleComponent implements OnInit {
+export class ArticleComponent {
 
-    public news: any = [];
+    constructor(public newsService:NewsService, private route: ActivatedRoute) {
+        this.route.params.subscribe(params => { this.fetchItem(params) });
 
-    constructor() { }
+        if(this.newsService.articles.length <1) {
+            this.newsService.getArticles();
+        }
+    }
 
-    ngOnInit() {
-        this.news.push({
-            id:1,
-            title:'Art attracts us only by what it reveals of our most secret self',
-            image: '/assets/images/news.jpg'
-        });
-
-        this.news.push({
-            id:1,
-            title:'we cut keys while you wait',
-            image: '/assets/images/music/im-feeling-it.jpg'
-        });
-
-        this.news.push({
-            id:1,
-            title:'How it all went down at the Blinky bill & the keycutters show at the alchemist.',
-            image: '/assets/images/music/we-cut-keys-2.jpg'
-        });
+    fetchItem(params:any) {
+        this.newsService.getArticle(params.id);
     }
 
 }
