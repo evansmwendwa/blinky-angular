@@ -48,7 +48,7 @@ export class VideoService {
 
     sanitizedEmbed(url:string) {
         let youtube_code = this.parse_utube_url(url);
-        let embedUrl = 'https://www.youtube.com/embed/' + youtube_code + '?modestbranding=1&autoplay=1&showinfo=0';
+        let embedUrl = 'https://www.youtube.com/embed/' + youtube_code + '?modestbranding=0&autoplay=1&showinfo=0&iv_load_policy=3&rel=0';
         //return embedUrl;
         return this.sanitizer.bypassSecurityTrustResourceUrl(embedUrl);
     }
