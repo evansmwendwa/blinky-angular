@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Router, NavigationStart, Event } from '@angular/router';
+import { Router, NavigationStart, NavigationEnd, Event } from '@angular/router';
 import 'rxjs/add/operator/filter';
 
 @Injectable()
@@ -11,7 +11,10 @@ export class MenuService {
     constructor(private router:Router) {
         router.events.filter(
             event => event instanceof NavigationStart)
-            .subscribe((event:Event) => { this.menuExpanded = false }
+            .subscribe((event:Event) => {
+                this.menuExpanded = false,
+                document.body.scrollTop = 0
+            }
         );
     }
 
