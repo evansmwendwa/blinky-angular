@@ -1,0 +1,5 @@
+# This script should redirect all routes back to index.html in apache
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.html [L]
