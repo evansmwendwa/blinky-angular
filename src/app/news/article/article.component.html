@@ -8,7 +8,7 @@
             <a href="#" target="_blank"><i class="icon-google-plus"></i></a>
         </div>
         <div class="article-image">
-            <img [src]="newsService.article.image_name" alt=""  />
+            <img [src]="newsService.article.image_path" alt=""  />
         </div>
         <div class="article-contents" [innerHtml]="newsService.article.content">
 
@@ -23,7 +23,7 @@
             <h4>Explore more below</h4>
             <div class="container-fluid news-list">
                 <a *ngFor="let item of newsService.articles|slice:0:6;" routerLink="/news/{{ item.id }}" class="news-item">
-                    <img [src]="item.image_name"  />
+                    <img [src]="item.image_path"  />
                     <h3>{{ item.title }}</h3>
                 </a>
             </div>

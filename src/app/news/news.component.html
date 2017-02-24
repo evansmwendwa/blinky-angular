@@ -3,7 +3,7 @@
         <h1>Blinktank<span>blog</span></h1>
         <div class="container-fluid news-list">
             <a *ngFor="let article of newsService.articles" routerLink="/news/{{ article.id }}" class="news-item" >
-                <img [src]="article.image_name"  />
+                <img [src]="article.image_path"  />
                 <h3>{{ article.title }}</h3>
             </a>
         </div>
