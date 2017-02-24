@@ -1,8 +1,14 @@
 <nav class="active-{{menuService.menuExpanded}}">
     <ul>
-        <li *ngFor="let link of links" (mouseover)="menuService.highlightPage(link.key)">
+        <li *ngFor="let link of links">
             <a [routerLink]="link.link" [routerLinkActiveOptions]="{exact:true}"
             [routerLinkActive]="'active ' + link.key"
-            ><i class="{{link.key}}"></i><span>{{ link.text }}</span></a></li>
+            ><i class="{{link.key}}"></i><span>{{ link.text }}</span></a>
+
+            <div class="hover-animation {{ link.key }}" >
+                <div class="wipe-0"></div>
+                <div class="wipe-1"></div>
+            </div>
+        </li>
     </ul>
 </nav>
