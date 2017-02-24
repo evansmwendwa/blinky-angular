@@ -37,6 +37,8 @@ export class NewsService {
     }
 
     getArticle(id:number) {
+        this.article = {};
+
         this.http.get(this.articleEndpoint+id)
         .subscribe(
             response => { this.article = response },
