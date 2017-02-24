@@ -10,11 +10,11 @@
             <div class="container-fluid list-view" >
                 <a *ngFor="let episode of radioService.episodes" routerLink="/radio/{{episode.id}}" class="item">
                     <div class="item-image">
-                        <img [src]="episode.image_name" />
+                        <img [src]="episode.image_path" />
                     </div>
-                    <h3>{{ radioService.title }}</h3>
-                    <div class="tracks-count">{{ episode.release_month }}</div>
-                    <div class="release-date">({{ episode.release_year }})</div>
+                    <h3>{{ episode.title }}</h3>
+                    <div class="tracks-count">{{ episode.released_at | date:'MMMM' }}</div>
+                    <div class="release-date">({{ episode.released_at | date:'y' }})</div>
                 </a>
             </div>
         </div>

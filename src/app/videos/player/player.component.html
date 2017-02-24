@@ -13,7 +13,7 @@
         <div class="container-fluid list-container related-videos">
             <a *ngFor="let video of videoService.video.related" routerLink="/videos/{{video.id}}" class="item">
                 <div class="item-image">
-                    <img [src]="video.image_name" />
+                    <img [src]="video.image_path" />
                 </div>
                 <h3>{{video.title}}</h3>
                 <div class="release-date">({{video.release_year}})</div>

@@ -11,7 +11,7 @@
 
                 <a *ngFor="let video of videoService.videos" routerLink="/videos/{{ video.id }}" class="item" >
                     <div class="item-image">
-                        <img [src]="video.image_name" />
+                        <img [src]="video.image_path" />
                     </div>
                     <h3>{{ video.title }}</h3>
                     <div class="release-date">({{ video.release_year }})</div>

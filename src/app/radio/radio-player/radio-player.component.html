@@ -21,10 +21,12 @@
 
         <div class="album-details">
             <h2>{{ radioService.episode.title }}</h2>
-            <div class="tracks-count">({{ radioService.episode.tracks }} tracks) ({{radioService.episode.release_year}})</div>
+            <div class="tracks-count">({{ radioService.episode.tracks }}
+                track<span *ngIf="radioService.episode.tracks > 1">s</span>) 
+                ({{ radioService.episode.released_at | date:'y' }})</div>
             <div class="release-date">
-                {{ radioService.episode.release_month }}<br />
-                ({{ radioService.episode.release_year }})
+                {{ radioService.episode.released_at | date:'MMMM' }}<br />
+                ({{ radioService.episode.released_at | date:'y' }})
             </div>
         </div>
 
