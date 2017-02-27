@@ -14,17 +14,18 @@ nav{
     position: fixed;
     top:0;
     left:0;
-    height: 100%;
     background: #000;
     color:#fff;
     text-transform: uppercase;
     width: 0;
+    height: 100%;
     max-width: 380px;
     overflow: hidden;
     @include animate(.35s);
 
     &.active-true {
         width: 80%;
+
 
         @media(min-width: 990px) {
             max-width: 450px;

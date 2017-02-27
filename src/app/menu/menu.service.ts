@@ -7,6 +7,7 @@ export class MenuService {
 
     public menuExpanded = false;
     public hoveredMenu = '';
+    public animationState = '';
 
     constructor(private router:Router) {
         router.events.filter(
@@ -14,6 +15,7 @@ export class MenuService {
             .subscribe((event:Event) => {
                 this.menuExpanded = false,
                 document.body.scrollTop = 0
+                this.animationState = '';
             }
         );
     }

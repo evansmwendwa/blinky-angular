@@ -1,6 +1,10 @@
 <nav class="active-{{menuService.menuExpanded}}">
     <ul>
-        <li *ngFor="let link of links">
+        <li *ngFor="let link of links"
+        (mouseenter)="mouseEnter($event)"
+        (mouseleave)="mouseLeave($event)"
+        class="{{menuService.animationState}}"
+        >
             <a [routerLink]="link.link" [routerLinkActiveOptions]="{exact:true}"
             [routerLinkActive]="'active ' + link.key"
             ><i class="{{link.key}}"></i><span>{{ link.text }}</span></a>

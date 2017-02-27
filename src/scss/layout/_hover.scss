@@ -26,7 +26,8 @@
 nav {
     ul {
         li {
-            &:hover {
+            &.hovered.playing
+            {
                 .hover-animation{
                     position: fixed;
                     right:0;

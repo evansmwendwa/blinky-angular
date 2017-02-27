@@ -56,4 +56,22 @@ export class MenuComponent implements OnInit {
     ngOnInit() {
     }
 
+    mouseEnter(event:any) {
+        let target = event.currentTarget;
+
+        if(!target.classList.contains('hovered')) {
+            target.classList.add('hovered');
+        }
+
+        this.menuService.animationState = 'playing';
+    }
+
+    mouseLeave(event:any) {
+        let target = event.currentTarget;
+
+        if(target.classList.contains('hovered')) {
+            target.classList.remove('hovered');
+        }
+    }
+
 }
