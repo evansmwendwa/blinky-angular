@@ -10,53 +10,53 @@ export class MenuComponent implements OnInit {
 
     public links = [
         {
-            link:'/music',
+            link: '/music',
             text: 'Music',
             key: 'music'
         },
         {
-            link:'/videos',
+            link: '/videos',
             text: 'Videos',
             key: 'videos'
         },
         {
-            link:'/radio',
+            link: '/radio',
             text: 'Radio',
             key: 'radio-station'
         },
         {
-            link:'/news',
+            link: '/news',
             text: 'News',
             key: 'news'
         },
         {
-            link:'/bio',
+            link: '/bio',
             text: 'Bio',
             key: 'bio'
         },
         {
-            link:'/press',
+            link: '/press',
             text: 'Press',
             key: 'press'
         },
         {
-            link:'/photos',
+            link: '/photos',
             text: 'Photos',
             key: 'photos'
         },
         {
-            link:'/hello',
+            link: '/hello',
             text: 'Hello!',
             key: 'hello'
         }
     ];
 
-    constructor(public menuService:MenuService) { }
+    constructor(public menuService: MenuService) { }
 
     ngOnInit() {
     }
 
-    mouseEnter(event:any) {
+    mouseEnter(event: any) {
         let target = event.currentTarget;
 
         if(!target.classList.contains('hovered')) {
@@ -66,7 +66,7 @@ export class MenuComponent implements OnInit {
         this.menuService.animationState = 'playing';
     }
 
-    mouseLeave(event:any) {
+    mouseLeave(event: any) {
         let target = event.currentTarget;
 
         if(target.classList.contains('hovered')) {

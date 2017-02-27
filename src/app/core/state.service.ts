@@ -12,8 +12,8 @@ export class StateService {
     }
 
     public getState(): any {
-        var _raw: any;
-        var _decoded: any;
+        let _raw: any;
+        let _decoded: any;
 
         try {
             if( this.storageAvailable() ) {
@@ -32,7 +32,7 @@ export class StateService {
     }
 
     private updateState( data: any ): boolean {
-        var _encoded: any;
+        let _encoded: any;
 
         if(!this.storageAvailable() ) {
             return false;
@@ -56,7 +56,7 @@ export class StateService {
     }
 
     public set(key: string, value: any) {
-        var _stateType = typeof this.state;
+        let _stateType = typeof this.state;
 
         if(_stateType === 'object') {
             if(_stateType === null) {
@@ -84,7 +84,7 @@ export class StateService {
         return this.state[key];
     }
 
-    public remove(key:string) {
+    public remove(key: string) {
         try {
             this.set(key, '');
             delete this.state[key];
@@ -96,7 +96,7 @@ export class StateService {
     }
 
     private storageAvailable(): boolean {
-        var x = '__storage_test__';
+        const x = '__storage_test__';
 
         try {
             localStorage.setItem(x, x);

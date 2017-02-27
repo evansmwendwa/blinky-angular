@@ -9,13 +9,13 @@ export class MenuService {
     public hoveredMenu = '';
     public animationState = '';
 
-    constructor(private router:Router) {
+    constructor(private router: Router) {
         router.events.filter(
             event => event instanceof NavigationStart)
-            .subscribe((event:Event) => {
+            .subscribe((event: Event) => {
                 this.menuExpanded = false,
-                document.body.scrollTop = 0
-                this.animationState = '';
+                document.body.scrollTop = 0,
+                this.animationState = ''
             }
         );
     }
@@ -24,7 +24,7 @@ export class MenuService {
         this.menuExpanded = !this.menuExpanded;
     }
 
-    highlightPage(page:string) {
+    highlightPage(page: string) {
         this.hoveredMenu = page;
     }
 
