@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { MenuService } from './menu/menu.service';
+import { PlayerComponent } from './music/player/player.component';
+import { AnimationComponent } from './animation/animation.component';
 
 describe('AppComponent', () => {
     let component: AppComponent;
@@ -25,7 +27,9 @@ describe('AppComponent', () => {
                 AppComponent,
                 HomeComponent,
                 HeaderComponent,
-                MenuComponent
+                MenuComponent,
+                PlayerComponent,
+                AnimationComponent
             ],
             providers: [
                 MenuService

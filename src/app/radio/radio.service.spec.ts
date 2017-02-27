@@ -2,11 +2,12 @@
 
 import { TestBed, async, inject } from '@angular/core/testing';
 import { RadioService } from './radio.service';
+import { HttpClient } from '../shared/http-client.service';
 
 describe('RadioService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [RadioService]
+            providers: [RadioService, HttpClient]
         });
     });
 
