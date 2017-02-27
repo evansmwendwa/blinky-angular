@@ -1,15 +1,16 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async, inject } from '@angular/core/testing';
-import { HttpModule, Http, BaseRequestOptions, XHRBackend } from '@angular/http';
 import { HttpClient } from './http-client.service';
-import { MockBackend } from '@angular/http/testing';
+import { AppTestingModule } from '../test.module';
+
 
 describe('HttpClientService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [HttpModule],
-            providers: [HttpClient, { provide: XHRBackend, useClass: MockBackend }]
+            imports: [
+                AppTestingModule
+            ]
         });
     });
 

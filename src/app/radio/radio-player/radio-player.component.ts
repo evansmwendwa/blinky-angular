@@ -15,7 +15,6 @@ export class RadioPlayerComponent {
     }
 
     fetchItem(params:any) {
-        console.log('fetch');
         this.radioService.getEpisode(params.id);
     }
 

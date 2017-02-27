@@ -2,12 +2,14 @@
 
 import { TestBed, async, inject } from '@angular/core/testing';
 import { VideoService } from './video.service';
-import { HttpClient } from '../shared/http-client.service';
+import { AppTestingModule } from '../test.module';
 
 describe('VideoService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [VideoService, HttpClient]
+            imports: [
+                AppTestingModule
+            ]
         });
     });
 

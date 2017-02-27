@@ -1,8 +1,6 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { AppTestingModule } from '../../test.module';
 import { RadioPlayerComponent } from './radio-player.component';
 
 describe('RadioPlayerComponent', () => {
@@ -11,12 +9,15 @@ describe('RadioPlayerComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [RadioPlayerComponent]
+            imports: [
+                AppTestingModule
+            ]
         })
             .compileComponents();
     }));
 
     beforeEach(() => {
+
         fixture = TestBed.createComponent(RadioPlayerComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();

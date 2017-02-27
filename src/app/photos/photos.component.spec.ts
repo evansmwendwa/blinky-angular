@@ -1,10 +1,7 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-import { MasonryModule } from 'angular2-masonry';
-
 import { PhotosComponent } from './photos.component';
+import { AppTestingModule } from '../test.module';
 
 describe('PhotosComponent', () => {
     let component: PhotosComponent;
@@ -12,8 +9,9 @@ describe('PhotosComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            imports: [MasonryModule],
-            declarations: [PhotosComponent]
+            imports: [
+                AppTestingModule
+            ],
         })
             .compileComponents();
     }));

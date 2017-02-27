@@ -2,11 +2,14 @@
 
 import { TestBed, async, inject } from '@angular/core/testing';
 import { PhotosService } from './photos.service';
+import { AppTestingModule } from '../test.module';
 
 describe('PhotosService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [PhotosService]
+            imports: [
+                AppTestingModule
+            ]
         });
     });
 

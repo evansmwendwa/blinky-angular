@@ -1,8 +1,6 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { AppTestingModule } from '../test.module';
 import { RadioComponent } from './radio.component';
 
 describe('RadioComponent', () => {
@@ -11,7 +9,9 @@ describe('RadioComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [RadioComponent]
+            imports: [
+                AppTestingModule,
+            ]
         })
             .compileComponents();
     }));

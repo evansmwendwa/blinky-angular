@@ -2,11 +2,14 @@
 
 import { TestBed, async, inject } from '@angular/core/testing';
 import { MusicService } from './music.service';
+import { AppTestingModule } from '../test.module';
 
 describe('MusicService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [MusicService]
+            imports: [
+                AppTestingModule
+            ]
         });
     });
 

@@ -2,11 +2,14 @@
 
 import { TestBed, async, inject } from '@angular/core/testing';
 import { StateService } from './state.service';
+import { AppTestingModule } from '../test.module';
 
 describe('StateService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [StateService]
+            imports: [
+                AppTestingModule
+            ]
         });
     });
 
