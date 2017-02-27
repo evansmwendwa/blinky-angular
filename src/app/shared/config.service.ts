@@ -1,7 +1,12 @@
-import { Injectable } from '@angular/core';
+import { Injectable, isDevMode } from '@angular/core';
 
 @Injectable()
 export class ConfigService {
-    public baseUrl = 'http://api.authenticvisualsmedia.com';
-    constructor() { }
+    public baseUrl = 'http://backend.blinkybillmusic.com/api';
+
+    constructor() {
+        if(isDevMode()) {
+            this.baseUrl = 'http://api.blink.dev/api';
+        }
+    }
 }
