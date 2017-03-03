@@ -1,0 +1,42 @@
+<div class="container-fluid singles-component">
+    <h3>Singles</h3>
+    <div class="container-fluid singles-list">
+        <div class="track-item" *ngFor="let track of tracksService.tracks, let index = index">
+            <div class="single-track" >
+                <div class="track-artwork" >
+                    <img  [src]="track.artwork_url|soundcloudThumbnail" [alt]="track.permalink" *ngIf="track.artwork_url"/>
+                    <img  [src]="track.user.avatar_url|soundcloudThumbnail" [alt]="track.permalink" *ngIf="!track.artwork_url && track.user.avatar_url" />
+
+                    <div class="track-play">
+                        <div class="context">
+                            <span class="glyphicon glyphicon-play-circle"></span>
+                            <div class="play-text">Play Track</div>
+                        </div>
+                    </div>
+
+                    <div class="track-play" (click)="audioPlayer.playTrack(index)" *ngIf="!audioPlayer.playing || audioPlayer.playListIndex !== index">
+                        <div class="context">
+                            <span class="glyphicon glyphicon-play-circle"></span>
+                            <div class="play-text">Play Track</div>
+                        </div>
+                    </div>
+
+                    <div class="track-play pause" (click)="audioPlayer.pause()" *ngIf="audioPlayer.playListIndex === index && audioPlayer.playing">
+                        <div class="context">
+                            <span class="glyphicon glyphicon-pause"></span>
+                            <div class="play-text">Pause</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="track-info">
+                    <h4 [innerHtml]="track.title | truncate: 40"></h4>
+                    <div class="release-date">
+                        ({{ track.created_at | date:'y' }})
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
