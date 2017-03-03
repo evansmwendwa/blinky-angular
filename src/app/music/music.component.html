@@ -8,7 +8,6 @@
         <div class="container-fluid list-container">
             <h2>Albums &amp; EP's</h2>
             <div class="container-fluid list-view" *ngIf="musicService.response.results">
-
                 <a routerLink="/music/{{ item.collectionId }}" class="item" *ngFor="let item of musicService.response.results | slice:1">
                     <div class="item-image">
                         <img [src]="musicService.formatFilename(item.artworkUrl100)" />
@@ -17,9 +16,13 @@
                     <div class="tracks-count">{{ item.trackCount }} Track<span *ngIf="item.trackCount > 1">s</span></div>
                     <div class="release-date">({{ item.releaseDate | date:'y' }})</div>
                 </a>
-
             </div>
         </div>
+
+        <div class="container-fluid singles-container">
+            <app-tracks></app-tracks>
+        </div>
+
     </div>
 </div>
 <app-animation [page]="'music'"></app-animation>

@@ -7,6 +7,19 @@
 }
 .item-image{
     img{
-        opacity: 0.96;
+        display: block;
+        border:1px solid #d7d7d7;
+    }
+}
+.singles-container{
+    padding: 25px;
+    max-width: 930px;
+
+    @media(min-width: 400px) {
+        padding: 15px;
+    }
+
+    @media(min-width: 600px) {
+        padding: 10px;
     }
 }
