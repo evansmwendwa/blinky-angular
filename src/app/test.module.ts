@@ -19,10 +19,14 @@ import { VideoService } from './videos/video.service';
 import { RadioService } from './radio/radio.service';
 import { PressService } from './press/press.service';
 import { NewsService } from './news/news.service';
+import { TracksService } from './music/tracks.service';
 
 // import pipes
+import { SoundcloudThumbnailPipe } from './pipes/soundcloud-thumbnail.pipe';
+import { TruncatePipe } from './pipes/truncate.pipe';
 
 // import directives
+
 
 // import components
 import { AppComponent } from './app.component';
@@ -43,6 +47,7 @@ import { PressComponent } from './press/press.component';
 import { BioComponent } from './bio/bio.component';
 import { AnimationComponent } from './animation/animation.component';
 import { PlayerComponent } from './music/player/player.component';
+import { TracksComponent } from './music/tracks/tracks.component';
 
 
 @NgModule({
@@ -72,7 +77,10 @@ import { PlayerComponent } from './music/player/player.component';
       PressComponent,
       BioComponent,
       AnimationComponent,
-      PlayerComponent
+      PlayerComponent,
+      TracksComponent,
+      SoundcloudThumbnailPipe,
+      TruncatePipe
   ],
   providers: [
       MessageService,
@@ -87,6 +95,7 @@ import { PlayerComponent } from './music/player/player.component';
       RadioService,
       PressService,
       NewsService,
+      TracksService,
 
       MockBackend,
       BaseRequestOptions,
@@ -119,7 +128,10 @@ import { PlayerComponent } from './music/player/player.component';
       PressComponent,
       BioComponent,
       AnimationComponent,
-      PlayerComponent
+      PlayerComponent,
+      TracksComponent,
+      SoundcloudThumbnailPipe,
+      TruncatePipe
   ]
 })
 export class AppTestingModule { }
